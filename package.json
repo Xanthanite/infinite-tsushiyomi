@@ -1,0 +1,19 @@
+{
+  "name": "tsushiyomi",
+  "version": "1.0.0",
+  "description": "Sushi  website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xanthanite/infinite-tsushiyomi.git"
+  },
+  "author": "Michael Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xanthanite/infinite-tsushiyomi/issues"
+  },
+  "homepage": "https://github.com/Xanthanite/infinite-tsushiyomi#readme"
+}
