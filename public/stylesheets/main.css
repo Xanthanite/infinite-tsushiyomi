@@ -1,0 +1,213 @@
+body {
+  font-family: 'Spectral';
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.514);
+  position: fixed;
+}
+
+.noselect:hover {
+  cursor: default;
+}
+
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.primary {
+  color: salmon;
+  font-weight: 800;
+}
+
+.secondary {
+  color: rgb(236, 119, 106);
+  font-weight: 500;
+}
+
+.mini-logo {
+  height: 90px;
+  width: 150px;
+  margin-right: -50px;
+  margin-left: -50px;
+}
+
+.navbar {
+  height: 90px;
+  padding: 20px;
+  width: 800px;
+  margin: 0 auto;
+  background-image: url('http://localhost:3000/pictures/wooden-bg.jpg');
+  background-size: cover;
+  background-position-y: 120px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: none;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  z-index: 3;
+  box-shadow: 0 3px 2px -1px rgba(0,0,0,.2);
+}
+
+.navbar-default .navbar-brand {
+  color: salmon;
+  font-weight: 800;
+  font-size: 3.5rem;
+  padding: 0;
+  margin-top: -20px;
+  height: 70px;
+  transition: all ease-in-out .4s;
+}
+
+.navbar-default .navbar-brand-text {
+  font-family: 'Nanum Brush Script', cursive;
+  color: salmon;
+  font-weight: 800;
+  font-size: 3.5rem;
+  padding: 0;
+  padding-top: 4px;
+  display: inline-block;
+  height: 70px;
+  transition: all ease-in-out .4s;
+}
+
+.navbar-default .navbar-brand-text:hover {
+  text-decoration: none;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: rgb(134, 67, 67);
+}
+
+.navbar-default .navbar-nav .navi-text {
+  font-weight: 800;
+  padding: 18px 8px;
+  font-size: 2.0rem;
+  color: salmon;
+  transition: all ease-in-out .4s;
+}
+
+.navbar-default .navbar-nav .navi-text:hover {
+  color: rgb(145, 71, 71);
+}
+
+.full-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content-box {
+  margin: 10% auto;
+  height: 500px;
+  width: 70%;
+  display: block;
+  float: none;
+  z-index: 1;
+}
+
+#hp-section-1 {
+  background-image: url('http://localhost:3000/pictures/dojo-bg.jpg');
+  background-size: contain;
+}
+
+.hp-panel-1 {
+  height: 100%;
+  padding-top: 4%;
+  padding-right: 0;
+  border: 4px solid rgba(148, 93, 57, 0.582);
+}
+
+.hp-panel-2 {
+  height: 100%;
+  padding-top: 6%;
+  background-color: rgba(148, 93, 57, 0.582);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.hp-fresh-text {
+  font-size: 6rem;
+  font-weight: 800;
+  font-family: 'Nanum Brush Script', cursive;
+}
+
+#sushi-pick {
+  height: 450px;
+  width: 500px;
+  float: right;
+  z-index: 0;
+}
+
+.hp-reserve {
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: auto;
+  margin-top: 30px;
+  padding: auto;
+  padding-top: 15px;
+  background-color: salmon;
+  color: rgb(53, 53, 53);
+  border: none;
+  border-radius: 5px;
+  display: block;
+  height: 15%;
+  width: 100px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.hp-reserve:hover {
+  background-color: rgb(211, 107, 96);
+  color: rgb(134, 67, 67);
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+
+#hp-section-2 {
+  background-image: url('http://localhost:3000/pictures/buffet-bg.jpg');
+  background-size: cover;
+}
+
+
+
+.footer-bar {
+  background-color: rgb(148, 93, 57);
+  bottom: 0;
+  width: 99.92vw;
+}
+
+.footer-bar-inner {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-text {
+  padding-top: 3px;
+  font-weight: 600;
+  color: black;
+  font-size: 1.5rem;
+}
+
+li {
+  list-style: none;
+}
+
+.fab {
+  font-size: 3rem;
+  color: black;
+  padding: 0px 2px;
+}
+
+.media-icons {
+  padding-top: 10px;
+}

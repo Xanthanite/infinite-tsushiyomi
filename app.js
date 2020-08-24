@@ -4,9 +4,9 @@ var express 						= require('express'),
 	passport 							= require('passport'),
 	bodyParser 						= require('body-parser'),
 	User									= require('./models/user'),
+	favicon								= require('serve-favicon'),
 	LocalStrategy					= require('passport-local'),
-	passportLocalMongoose	= require('passport-local-mongoose'),
-	request 							= require('request');
+	passportLocalMongoose	= require('passport-local-mongoose');
 
 mongoose.set("useNewUrlParser", true);
 
@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.set('view engine', 'ejs');
 
+app.use(favicon(__dirname + '/public/pictures/favicon.ico'));
+
 app.use(express.static(__dirname + "/public"))
 
 																	///////////////
@@ -26,6 +28,18 @@ app.use(express.static(__dirname + "/public"))
                          
 app.get("/", function(req, res) {
       res.render("home");
+})
+
+app.get("/about", function(req, res) {
+  res.render("about");
+})
+
+app.get("/reserve", function(req, res) {
+  res.render("reserve");
+})
+
+app.get("/menu", function(req, res) {
+  res.render("menu");
 })
 
 

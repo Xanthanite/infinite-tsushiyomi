@@ -1,0 +1,147 @@
+	Sushi Rolls Cooked: 
+Avocado Cucumber Roll
+$6
+Avocado and Cucumber
+
+California Roll
+$6
+Imitation Crab and Avocado
+
+Snowy California Roll
+$8
+Snow Crab and Avocado
+
+
+Crazy Roll (Deep Fried)
+$13
+Inside: Spicy Assorted Fish 
+Outside: Avocado, Unagi, Spicy Mayo, and Unagi Sauce
+
+Crunchy Club Roll
+$11
+Inside: Imitation Crab, Tempura Shrimp, and Cucumber 
+Outside: Crunch and Unagi Sauce
+
+Dragon Roll
+$13
+Inside: Cucumber, Imitation Crab, and Tempura Shrimp 
+Outside: Unagi, Avocado, and Unagi Sauce
+
+Godzilla Roll (Baked Roll)
+$13
+Inside: Imitation Crab, Cream Cheese, and Tempura Shrimp 
+Outside: Albacore, Garlic Mayo, and Unagi Sauce
+
+Lion King Roll (Baked)
+$12
+Inside: Avocado and Imitation Crab 
+Outside: Salmon and baked with Garlic Mayo, Spicy Mayo and Unagi sauce
+
+Salmon Skin Roll
+$8
+Salmon Skin, Cucumber, and Green Onion
+
+Ocean Roll
+$12
+Inside: Imitation Crab and Avocado 
+Outside: Snow Crab, Seared Tuna, Avocado, Spicy Mayo, and Unagi Sauce
+
+Shogun Roll
+$13
+Inside: Deep Fried Soft Shell Crab, Cucumber, and Imitation Crab 
+Outside: Seared Tuna, Avocado, and Unagi Sauce
+
+
+Spider Roll
+$12
+Inside: Avocado, Cucumber, and Deep Fried Soft Shell Crab 
+Outside: Nori and Unagi Sauce
+
+Super California Roll (Deep Fried)
+$9
+Deep Fried California Roll with Unagi Sauce
+
+Temptation Roll
+$12
+Inside: Tempura Shrimp, Crab, and Cucumber 
+Outside: Avocado, Spicy Mayo, and Unagi Sauce
+
+Tiger Roll
+$12
+Inside: Imitation Crab and Tempura Shrimp
+Outside: Ebi and Unagi Sauce
+
+
+
+
+        Sushi Rolls (Raw)
+
+        Akai Roll
+        $12
+        Inside: Seared Tuna, cream cheese, cucumber
+        Outside: Tuna, Tobiko, Spicy Mayo, Unagi Sauce, and Hot Sauce
+
+        Brentwood’s Finest Roll
+        $13
+        Inside: Spicy Tuna, Cucumber, and Tempura Shrimp 
+        Outside: Snow Crab, Avocado, Deep Fried Onion, Spicy Mayo, and Unagi Sauce
+        California Sunrise Roll
+
+        California Sunrise Roll
+        $13
+        Inside: Avocado and Imitation Crab 
+        Outside: Spicy Tuna, Salmon, Deep Fried Onion, Garlic Mayo, Spicy Mayo, and Unagi Sauce
+
+        Caterpillar Roll
+        $12
+        Inside: Unagi, Cucumber, Imitation Crab
+        Outside: Avocado and Unagi Sauce
+
+        Champion Roll
+        $15
+        Inside: Avocado, Deep Fried Soft Shell Crab, and cucumber
+        Outside: Unagi and Unagi Sauce
+
+        Cherry Blossom Roll
+        $12
+        Inside: Avocado and Imitation Crab 
+        Outside: Tuna and Tobiko
+
+        Fantasy Roll
+        $14
+        Inside: Spicy Tuna, cucumber, deep fried soft shell crab
+        Outside: Assorted fish, Garlic Mayo, Spicy Mayo, Unagi Sauce, and Hot Sauce
+
+        Karai Roll
+        $12
+        Inside: Spicy Tuna and Tempura Shrimp
+        Outside: Salmon, Lemon Slices, Sriracha, and Spicy Mayo
+
+		RAMEN
+
+Misaka Tonkotsu
+$13
+Rich creamy chicken and pork broth
+Toppings: kakuni pork belly, organic chicken, bamboo shoot, kikurage mushroom, soft boiled egg, green onions, roasted garlic, and nori
+
+Shrimp and Scallop Ramen
+$17
+Rich chicken and pork broth
+Topping: prawns, scallops, bamboo shoot, kikurage mushroom, soft boiled egg, green onions, roasted garlic, and nori
+
+Tori Paitan
+$13
+Rich chicken and pork broth 
+Topping: kakuni pork belly, organic chicken, bamboo shoot, kikurage mushroom, soft boiled egg, green onions, roasted garlic, and nori
+
+
+Miso Ramen (only served spicy)
+$13
+Spicy creamy miso broth
+Toppings: ground pork, kakuni pork belly, bamboo shoot, sprouts, broccolini, cabbage, corn, kikurage mushroom, green onions, roasted garlic, and nori
+
+Vegan Ramen
+$13
+Creamy Vegan broth
+Toppings: lotus root, broccolini, spinach, baby corn, portabella mushroom, and green onions
+
