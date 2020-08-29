@@ -1,8 +1,35 @@
 <%- include('partials/header.ejs') %>
 <div class = "row full-page">
+  <div id="rp-panel" class="col-lg-12 col-md-12 hp-panel">
+    <h1>Make A Reservation</h1>
+    <div id="rp-contact-form">
+      <form action="/reserve" method="POST" class="form-group">
 
+        <label for="contact-us-firstName" class="contact-form-label">First Name</label>
 
+        <input name="reservation[firstname]" type="text" placeholder="FIRST NAME" id="contact-us-firstName" class="form-control" aria-label="Contact us name field" required>
 
+        <label for="contact-us-lastName" class="contact-form-label">Last Name</label>
+
+        <input name="reservation[lastname]" type="text" placeholder="LAST NAME" id="contact-us lastName" class="form-control" aria-label="Contact us name field" required>
+
+        <label for="contact-us-phone" class="contact-form-label">Phone Number</label>
+
+        <input name="reservation[phonenumber]" type="tel" placeholder="888-888-8888" id="contact-us-phone" max-length="12" class="form-control" aria-label="Contact us phone field" required>
+
+        <label for="contact-us-email" class="contact-form-label">Email Address</label>
+        
+        <input name="reservation[email]" type="email" placeholder="username@email.com" id="contact-us-email" class="form-control" aria-label="Contact us email field" required>
+
+        <label for="contact-us-date" class="contact-form-label">Date</label>
+
+        <input name="reservation[date]" data-date-format="dd/mm/yyyy" data-provide="datepicker" class="form-control datepicker" id="datepicker" aria-label="Reservation date field"></input>
+        
+        <button type="submit" class="form-control btn btn-success">SEND</button>
+      
+      </form>
+    </div>
+  </div>
 
 
 

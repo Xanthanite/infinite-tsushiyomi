@@ -4,8 +4,10 @@ var express 						= require('express'),
 	passport 							= require('passport'),
 	bodyParser 						= require('body-parser'),
 	User									= require('./models/user'),
+	Reservation						= require('./models/reservation'),
 	favicon								= require('serve-favicon'),
 	LocalStrategy					= require('passport-local'),
+	Message								= require('./models/message'),
 	passportLocalMongoose	= require('passport-local-mongoose');
 
 mongoose.set("useNewUrlParser", true);
@@ -42,6 +44,27 @@ app.get("/menu", function(req, res) {
   res.render("menu");
 })
 
+app.post("/contact", (req, res) => {
+	Message.create(req.body.message, (err, message) => {
+		if(err) {
+			console.log("Couldn't send message, sorry!")
+		}else {
+			message.save();
+			res.status(204).send()
+		}
+	})
+})
+
+app.post("/reserve", (req, res) => {
+	Reservation.create(req.body.reservation, (err, reservation) => {
+		if(err) {
+			console.log("Couldn't make reservation, sorry!")
+		}else {
+			reservation.save();
+			res.status(204).send()
+		}
+	})
+})
 
 
 
