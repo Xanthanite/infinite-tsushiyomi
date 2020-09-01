@@ -1,75 +1,164 @@
 <%- include('partials/header.ejs') %>
-
+                                                                      <!-- Section 1 Start -->
 <div id="hp-section-1" class = "row full-page">
   <div class="overlay"></div>
-  <div class = "row main-content-box">
-    <div class = "col-lg-6 col-md-6 hp-panel-1">
-
-      <img id="sushi-pick" class="noselect" src="/pictures/sushi-pick.png">
-
+  <div class = "row full-page">
+    <div id="hp-s1-panel1" class = "col-lg-6 col-xs-6 hp-panel">
+      <div id="hp-s1-img">
+      
+        <img id="sushi-pick" class="noselect" src="/pictures/sushi-pick.png">
+      
+      </div>
     </div>
-    <div id="hp-s1-panel1" class = "col-lg-6 col-md-6 hp-panel-2">
-      
-      <h1 class="hp-fresh-text text-center primary noselect">FRESH SUSHI</h1>
+    <div id="hp-s1-panel2" class = "col-md-6 col-xs-12 hp-panel">      
+      <div id="hp-s1-text">
 
-      <h1 class="hp-fresh-text text-center secondary noselect">+</h1>
+        <h1 class="hp-fresh-text text-center primary noselect">FRESH SUSHI</h1>
 
-      <h1 class="hp-fresh-text text-center primary noselect">ALL YOU CAN EAT</h1>
-      
-      <a class="hp-reserve btn-lg text-center" href="/reserve">RESERVE A TABLE</a>
+        <h1 class="hp-fresh-text text-center secondary noselect">+</h1>
 
+        <h1 class="hp-fresh-text text-center primary noselect">ALL YOU CAN EAT</h1>
+        
+        <a class="hp-reserve btn-lg text-center" href="/reserve">RESERVE A TABLE</a>
+        
+      </div>
     </div>
   </div>
 </div>
+                                                                            <!-- Section 1 End  -->
+                                                                            <!-- Section 2 Start  -->
 <div id="hp-section-2" class = "row full-page">
   <div class="overlay"></div>
+  <div id="hp-s2-panel" class="col-12 hp-panel">
 
+    <h1 id="hp-faves-title" class="noselect">Customer Favorites</h1>
+    
+    <div id="hp-img-grid" class="row">
+      <div id="beep" class="col-4 hp-img-container">
+        <div id="crazyroll" class="grid-img-overlay">
+
+          <p class="grid-img-overlay-head noselect">Crazy Roll</p>
+
+          <ul class="grid-img-overlay-body noselect">
+            
+            <li class="grid-img-overlay-body-text">548 Calories</li>
+
+            <li class="grid-img-overlay-body-text">72g Carbs</li>
+
+            <li class="grid-img-overlay-body-text">16g Fat</li>
+
+            <li class="grid-img-overlay-body-text">19g Protein</li>
+
+            <li class="grid-img-overlay-body-text">Inside: Spicy Assorted Fish</li>
+
+          </ul>
+
+        </div>
+        <img class="grid-img" src="/pictures/crazy_roll.jpg">
+
+      </div>
+      <div class="col-4 hp-img-container">
+        <div id="secondfav" class="grid-img-overlay">
+
+          <p class="grid-img-overlay-head">Testingboy</p>
+
+          <ul class="grid-img-overlay-body noselect">
+            
+            <li class="grid-img-overlay-body-text">548 Calories</li>
+
+          </ul>
+
+        </div>
+
+        <img class="grid-img" src="/pictures/crazy_roll.jpg">
+
+      </div>
+      <div class="col-4 hp-img-container">
+        <div class="grid-img-overlay">
+
+          <p class="grid-img-overlay-head">Testingboy</p>
+
+          <ul class="grid-img-overlay-body noselect">
+            
+            <li class="grid-img-overlay-body-text">548 Calories</li>
+
+            <li class="grid-img-overlay-body-text">72g Carbs</li>
+
+            <li class="grid-img-overlay-body-text">16g Fat</li>
+
+            <li class="grid-img-overlay-body-text">19g Protein</li>
+
+          </ul>
+
+        </div>
+
+        <img class="grid-img" src="/pictures/crazy_roll.jpg">
+
+      </div>
+    </div>
+
+    <a id="hp-viewfullmenu" class="btn btn-lg text-center" href="/menu">FULL MENU</a>
+  
+  </div>
 </div>
+                                                                            <!-- Section 2 End  -->
+                                                                            <!-- Section 3.1 Start  -->
 <div id="hp-section-3" class = "row full-page">
   <div class="overlay"></div>
-  <div id="hp-s3-panel1" class="col-lg-6 col-md-6 hp-panel">
+  <div id="hp-s3-panel1" class="col-lg-6 col-md-6 col-sm-6 d-none d-md-block hp-panel">
 
-    <h1 class="qorc-head text-center">Questions or Concerns?</h1>
+    <h1 class="qorc-head text-center noselect">Questions or Concerns?</h1>
 
-    <p class="qorc-body text-center">If you have any questions about our restaurant or the food we serve, please do not hesitate
+    <p class="qorc-body text-center noselect">If you have any questions about our restaurant or the food we serve, please do not hesitate
        to contact us using the form on the right.</p>
 
-    <h1 class="qorc-head text-center">Location</h1>
+    <h1 class="qorc-head text-center noselect">Location</h1>
 
-    <p class="qorc-body text-center">6231 Main Street Stockholm NY, 10385</p>
+    <p class="qorc-body text-center noselect">6231 Main Street, Stockholm NY 10385</p>
 
-    <p></p>
+    <h1 class="qorc-head text-center noselect">COVID-19</h1>
+
+    <p class="qorc-body text-center noselect">Your safety and wellbeing are of the utmost importance to us during this difficult time. We 
+      are taking all concerns related to this very seriously and are also making sure to take all of the necessary precautions to 
+      help reduce the spread. For more information please visit our <a href="/about">About</a> page.
+    </p>
 
   </div>
-  <div id="hp-s3-panel2" class="col-lg-6 col-md-6 hp-panel">
+                                                                            <!-- Section 3.1 End  -->
+                                                                            <!-- Section 3.2 Start  -->
+  <div id="hp-s3-panel2" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 hp-panel">
+                                                                        <!-- Home Page Contact Form  -->
     <div id="hp-contact-form">
-      <form action="/contact" method="POST" class="form-group">
+      <form id="hp-contact-form-inner" action="/contact" method="POST" class="form-group">
 
-        <label for="contact-us-firstName" class="contact-form-label">First Name</label>
+        <label for="contact-us-firstName" class="contact-form-label noselect">First Name</label>
 
         <input name="message[firstname]" type="text" placeholder="FIRST NAME" id="contact-us-firstName" class="form-control" aria-label="Contact us name field" required>
 
-        <label for="contact-us-lastName" class="contact-form-label">Last Name</label>
+        <label for="contact-us-lastName" class="contact-form-label noselect">Last Name</label>
 
         <input name="message[lastname]" type="text" placeholder="LAST NAME" id="contact-us lastName" class="form-control" aria-label="Contact us name field" required>
 
-        <label for="contact-us-phone" class="contact-form-label">Phone Number</label>
+        <label for="contact-us-phone" class="contact-form-label noselect">Phone Number</label>
 
-        <input name="message[phonenumber]" type="tel" placeholder="888-888-8888" id="contact-us-phone" max-length="12" class="form-control" aria-label="Contact us phone field" required>
+        <input name="message[phonenumber]" type="tel" min="2222222222" max="9999999999" placeholder="888-888-8888" id="contact-us-phone" maxlength="12" class="form-control" aria-label="Contact us phone field" required>
 
-        <label for="contact-us-email" class="contact-form-label">Email Address</label>
+        <label for="contact-us-email" class="contact-form-label noselect">Email Address</label>
         
         <input name="message[email]" type="email" placeholder="username@email.com" id="contact-us-email" class="form-control" aria-label="Contact us email field" required>
 
-        <label for="contact-us-message" class="contact-form-label">Message</label>
+        <label for="contact-us-message" class="contact-form-label noselect">Message</label>
 
         <textarea name="message[message]" class="form-control" id="contact-us-message" aria-label="Contact us message field"></textarea>
         
-        <button type="submit" class="form-control btn btn-success">SEND</button>
-      
+        <button type="submit" id="contact-submit" class="form-control btn btn-success">SEND</button>
+
+        <p id="reserveinstead" class="text-center form-control noselect">Want to make a reservation? Go <a href="/reserve">here</a></p>
+                                                                          <!-- Home Page Contact Form  -->
       </form>
     </div>
+
   </div>
 </div>
-
+                                                                            <!-- Section 3 End  -->
 <%- include('partials/footer.ejs') %>

@@ -3,13 +3,18 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
+  overflow-x: hidden;
 }
 
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.514);
+  background-color: rgba(0, 0, 0, 0.644);
   position: fixed;
+}
+
+input {
+  text-align: center;
 }
 
 .noselect:hover {
@@ -39,8 +44,9 @@ body {
 }
 
 .navbar {
-  height: 90px;
+  height: 10vh;
   padding: 20px;
+  padding-top: 1.5vh;
   width: 800px;
   margin: 0 auto;
   background-image: url('http://localhost:3000/pictures/wooden-bg.jpg');
@@ -57,6 +63,24 @@ body {
   box-shadow: 0 3px 2px -1px rgba(0,0,0,.2);
 }
 
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  z-index: 2;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  color: salmon;
+  font-weight: 800;
+}
+
+.navbar-nav {
+  flex-direction: row;
+}
+
 .navbar-default .navbar-brand {
   color: salmon;
   font-weight: 800;
@@ -71,7 +95,7 @@ body {
   font-family: 'Nanum Brush Script', cursive;
   color: salmon;
   font-weight: 800;
-  font-size: 3.5rem;
+  font-size: 2.0rem;
   padding: 0;
   padding-top: 4px;
   display: inline-block;
@@ -88,9 +112,9 @@ body {
 }
 
 .navbar-default .navbar-nav .navi-text {
-  font-weight: 800;
-  padding: 18px 8px;
-  font-size: 2.0rem;
+  font-weight: 600;
+  padding: 0px 8px;
+  font-size: 1.0rem;
   color: salmon;
   transition: all ease-in-out .4s;
 }
@@ -106,43 +130,58 @@ body {
   padding: 0;
 }
 
-.main-content-box {
-  margin: 10% auto;
-  height: 500px;
-  width: 70%;
-  display: block;
-  float: none;
-  z-index: 1;
-}
-
-#hp-section-1 {
-  background-image: url('http://localhost:3000/pictures/dojo-bg.jpg');
-  background-size: contain;
-}
-
 .hp-panel {
   height: 100%;
   padding: 0px;
   margin: 0px;
 }
 
+#hp-section-1 {
+  background-image: url('http://localhost:3000/pictures/dojo-bg.jpg');
+  background-size: cover;
+}
+
 #hp-s1-panel1 {
-  padding-top: 4%;
-  padding-right: 0px;
-  border: 4px solid rgba(148, 93, 57, 0.582);
+  padding-top: 10%;
 }
 
 #hp-s1-panel2 {
-  padding-top: 6%;
-  background-color: rgba(148, 93, 57, 0.582);
+  padding-top: 10%;
+}
+
+#hp-s1-text {
+  padding: 4vw;
+  height: 80%;
+  width: 70%;
+  display: block;
+  float: none;
+  z-index: 1;
+  border: 4px solid rgba(148, 93, 57, 0.582);
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+#hp-s1-img {
+  height: 60%;
+  display: block;
+  float: none;
+}
+
+#hp-s2-panel {
+  padding-top: 6%;
+}
+
+#hp-faves-title {
+  width: 100%;
+  text-align: center;
+  color: salmon;
+}
+
 .hp-fresh-text {
-  font-size: 6rem;
+  font-size: 4vw;
   font-weight: 800;
   font-family: 'Nanum Brush Script', cursive;
+  margin: 0;
 }
 
 #sushi-pick {
@@ -154,19 +193,18 @@ body {
 
 .hp-reserve {
   font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1vw;
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 60px;
-  padding: auto;
-  padding-top: 15px;
+  margin-bottom: 20px;
+  padding: 1vw;
   background-color: salmon;
   color: rgb(53, 53, 53);
   border: none;
   border-radius: 5px;
   display: block;
-  height: 15%;
-  width: 100px;
+  height: 8vh;
+  width: 8vw;
   -moz-user-select: none;
   -webkit-user-select: none;
 }
@@ -188,54 +226,144 @@ body {
   background-size: cover;
 }
 
+#hp-img-grid {
+  width: 50%;
+  margin: auto;
+}
+
+.grid-img-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+.grid-img-overlay-head {
+  color: salmon;
+  margin-bottom: 1px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.hp-img-container {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-img-overlay-body {
+  padding: 0;
+}
+
+.grid-img-overlay-body-text {
+  width: 100%;
+  font-size: 1vw;
+  text-align: center;
+  color: salmon;
+}
+
+.grid-img {
+  width: 100%;
+  z-index: 1;
+}
+
+#hp-viewfullmenu {
+  display: block;
+  font-size: 1.5vw;
+  background-color: salmon;
+  color: rgb(53, 53, 53);
+  width: 15vw;
+  margin: auto;
+  margin-top: 4px;
+}
+
 #hp-section-3 {
   background-image: url('http://localhost:3000/pictures/contact-bg.jpg');
-  background-size: contain;
+  background-size: cover;
 }
 
 #hp-s3-panel1 {
-  padding-top: 15%;
+  padding-top: 10%;
 }
 
 .qorc-head {
-  height: 50px;
+  height: 40px;
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   font-weight: 800;
   color: salmon;
+  margin-bottom: 1px;
+  margin-top: 10px;
+  text-decoration: underline;
 }
 
 .qorc-body {
   width: 400px;
   margin: auto;
-  font-size: 2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: salmon;
 }
 
 #hp-s3-panel2 {
-  padding-top: 12%;
+  padding-top: 8%;
   padding-left: 10%;
+}
+
+input::-webkit-outer-spin-button,
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 #hp-contact-form {
   box-sizing: border-box;
   display: block;
   margin: 0;
-  height: 500px;
+  height: 90%;
   width: 80%;
+  padding: 30px;
+  border: 4px solid rgba(148, 93, 57, 0.582);;
+}
+
+.form-group {
+  margin: 0;
 }
 
 .contact-form-label {
   font-weight: 800;
   width: 100%;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: salmon;
 }
 
+#contact-submit {
+  margin-top: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#reserveinstead {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
 #rp-panel {
-  padding-top: 15%;
+  padding-top: 10%;
+}
+
+#mkreserveheader {
+  width: 100%;
+  text-align: center;
 }
 
 #rp-contact-form {
@@ -267,6 +395,8 @@ body {
   background-color: rgb(148, 93, 57);
   bottom: 0;
   width: 99.92vw;
+  position: relative;
+  height: 10%;
 }
 
 .footer-bar-inner {
@@ -293,4 +423,97 @@ li {
 
 .media-icons {
   padding-top: 10px;
+}
+
+                                                                    /* MOBILE RESPONSIVENESS */
+ /* Extra small devices (phones, 600px and down) */
+ /* @media only screen and (max-width: 600px) {...} */
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ /* @media only screen and (min-width: 600px) {...} */
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ /* @media only screen and (min-width: 768px) {...} */
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ /* @media only screen and (min-width: 992px) {...} */
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ /* @media only screen and (min-width: 1200px) {...}  */
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 10px;
+  }
+
+  #hp-s1-panel1 {
+    display: none;
+  }
+  #hp-s1-panel2 {
+    padding-top: 30%;
+  }
+
+  #hp-s1-text {
+    padding: 6vh;
+    height: 90%;
+    margin: auto;
+    width: 70%;
+    display: block;
+    float: none;
+    z-index: 1;
+    border: 4px solid rgba(148, 93, 57, 0.582);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .hp-fresh-text {
+    font-size: 3.5rem;
+    margin: auto;
+  }
+
+  .hp-reserve {
+    font-weight: 800;
+    font-size: .8rem;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 2vw;
+    background-color: salmon;
+    color: rgb(53, 53, 53);
+    border: none;
+    border-radius: 5px;
+    display: block;
+    height: 10%;
+    width: 100px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+  }
+
+  #reserveinstead {
+    height: 10%;
+  }
+
+  #hp-s3-panel2 {
+    padding-left: 20%;
+  }
+
+  .footer-bar {
+    height: 50px;
+  }
+
+  .footer-bar-inner {
+    height: 50px;
+  }
+
+  .media-icons {
+    height: 10px;
+  }
+
+  .social-icon-holder {
+    height: 10px;
+  }
+
+  .footer-text {
+    height: 20px;
+  }
 }
