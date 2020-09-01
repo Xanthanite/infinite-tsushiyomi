@@ -56,7 +56,7 @@ $('#contact-submit').on('click', function() {
   }, 10)
 })
 
-$('#contact-us-phone').on('change textInput input', function() {
+$('.phoneInput').on('change textInput input', function() {
   $(this).val($(this).val().replace(/(\d{3})\-?/,'$1-'))
   $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})-?/,'$1-$2-'))
   $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
@@ -81,7 +81,7 @@ function setInputFilter(textbox, inputFilter) {
 }
 
 //Now passing the input into the function just defined so it's attached and return what's allowed in regex
-setInputFilter(document.getElementById("contact-us-phone"), function(value) {
+setInputFilter(document.getElementsByClassName("phoneInput"), function(value) {
   return /^\d*\-*\d*\-*\d*$/.test(value); // Allow digits and '.' only, using a RegExp
 });
                                                                             //Homepage Image Overlay Idler
