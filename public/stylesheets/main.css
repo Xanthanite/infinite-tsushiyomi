@@ -75,6 +75,8 @@ input {
 .dropdown-item {
   color: salmon;
   font-weight: 800;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .navbar-nav {
@@ -89,6 +91,8 @@ input {
   margin-top: -20px;
   height: 70px;
   transition: all ease-in-out .4s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .navbar-default .navbar-brand-text {
@@ -101,6 +105,8 @@ input {
   display: inline-block;
   height: 70px;
   transition: all ease-in-out .4s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .navbar-default .navbar-brand-text:hover {
@@ -117,6 +123,8 @@ input {
   font-size: 1.0rem;
   color: salmon;
   transition: all ease-in-out .4s;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .navbar-default .navbar-nav .navi-text:hover {
@@ -167,14 +175,41 @@ input {
   float: none;
 }
 
-#hp-s2-panel {
-  padding-top: 6%;
+#hp-s2-panel1 {
+  width: 100%;
+}
+
+#hp-pricing {
+  width: 100%;
+}
+
+#hp-price-title {
+  width: 100%;
+  text-align: center;
+  color: salmon;
+  font-weight: 800;
+  font-size: 2.5vw;
+}
+
+#hp-pricinglist {
+  width: 10%;
+  margin: auto;
+  padding: 0px;
+}
+
+.hp-pricinglist-item {
+  font-weight: 600;
+  color: salmon;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 #hp-faves-title {
   width: 100%;
   text-align: center;
   color: salmon;
+  font-size: 2.5vw;
 }
 
 .hp-fresh-text {
@@ -224,11 +259,17 @@ input {
 #hp-section-2 {
   background-image: url('http://localhost:3000/pictures/buffet-bg.jpg');
   background-size: cover;
+  padding-top: 12vh;
 }
 
 #hp-img-grid {
   width: 50%;
   margin: auto;
+}
+
+hr {
+  border: .5px solid salmon;
+  width: 30%;
 }
 
 .grid-img-overlay {
@@ -267,6 +308,7 @@ input {
 
 .grid-img {
   width: 100%;
+  height: 25vh;
   z-index: 1;
 }
 
@@ -277,7 +319,7 @@ input {
   color: rgb(53, 53, 53);
   width: 15vw;
   margin: auto;
-  margin-top: 4px;
+  margin-top: 10px;
 }
 
 #hp-section-3 {
@@ -357,38 +399,93 @@ input[type=number] {
   border-top-left-radius: 0px;
 }
 
+#reserve-page {
+  background-image: url('http://localhost:3000/pictures/table-reserve-bg.jpg');
+  background-size: cover;
+}
+
 #rp-panel {
-  padding-top: 10%;
+  padding-top: 8%;
 }
 
 #mkreserveheader {
   width: 100%;
   text-align: center;
+  color: salmon;
+  font-size: 2vw;
+}
+
+#mkreservebody {
+  margin: auto;
+  color: salmon;
+  width: 50%;
+  text-align: center;
+  font-size: 1.5vw;
 }
 
 #rp-contact-form {
   width: 50%;
   margin: auto;
+  border: 4px solid rgba(148, 93, 57, 0.582);
+  padding: 2vw;
+  margin-top: 1.5vh;
+}
+
+#datepicker {
+  color: black;
+}
+
+th {
+  text-align: center;
 }
 
 .datepicker {
-  color: green;
+  color: white;
 }
 
 .datepicker-dropdown {
   background-color: black;
 }
 
+.datepicker-switch {
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.datepicker-switch:hover {
+  text-align: center;
+  cursor: pointer;
+}
+
 .dow {
   color: white;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .day {
-  color: green;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.day:hover {
+  cursor: pointer;
 }
 
 .disabled.day {
-  color: orange;
+  color: red;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.disabled.day:hover {
+  cursor: not-allowed;
 }
 
 .footer-bar {

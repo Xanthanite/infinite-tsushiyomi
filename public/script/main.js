@@ -1,16 +1,61 @@
 var idleListener;
 
-var currentIdle = ""
+var currentIdle = "";
 
-var lastIdle = ""
+var lastIdle = "";
 
-window.onload = function() {
-  console.log("hi");
+var disabledDays = [];
+
+
+var socket = io();
+socket.emit('chat message');
+socket.on('chat message', function(dates){
+  disabledDays = dates;
   $('.datepicker').datepicker({
     startDate: '+2d',
-    format: 'mm-dd-yyyy',
+    format: 'mm/dd/yyyy',
+    autoclose: true,
+    datesDisabled: disabledDays
   });
-}
+});
+
+
+                                                                              //On page load initialization
+$(document).ready(function() {
+//Form handling 
+  $('#contact-submit').on('click', function() {
+    setTimeout(function() {
+      $('#hp-contact-form-inner').trigger('reset')
+    }, 10)
+  })
+
+  $('.phoneInput').on('change textInput input', function() {
+    $(this).val($(this).val().replace(/(\d{3})\-?/,'$1-'))
+    $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})-?/,'$1-$2-'))
+    $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
+  });
+// Using input filter to fix the phone box to allow - and numbers but nothing else
+  function setInputFilter(textbox, inputFilter) {
+    ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
+      $(textbox).on(event, function() {
+        if (inputFilter(this.value)) {
+          this.oldValue = this.value;
+          this.oldSelectionStart = this.selectionStart;
+          this.oldSelectionEnd = this.selectionEnd;
+        } else if (this.hasOwnProperty("oldValue")) {
+          this.value = this.oldValue;
+          this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+        } else {
+          this.value = "";
+        }
+      });
+    });
+  }
+//Now passing the input into the function just defined so it's attached and return what's allowed in regex
+  setInputFilter($(".phoneInput"), function(value) {
+    return /^\d*\-*\d*\-*\d*$/.test(value); // Allow digits and '.' only, using a RegExp
+  });
+})
                                                               //Smooth Scroll Handling
 // Select all links with hashes
 $('a[href*="#"]')
@@ -49,53 +94,19 @@ $('a[href*="#"]')
       }
     }
   });
-                                                                          //Homepage form handling 
-$('#contact-submit').on('click', function() {
-  setTimeout(function() {
-    $('#hp-contact-form-inner').trigger('reset')
-  }, 10)
-})
 
-$('.phoneInput').on('change textInput input', function() {
-  $(this).val($(this).val().replace(/(\d{3})\-?/,'$1-'))
-  $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})-?/,'$1-$2-'))
-  $(this).val($(this).val().replace(/(\d{3})\-?(\d{3})\-?(\d{4})/,'$1-$2-$3'))
-});
-
-// Using input filter to fix the phone box to allow - and numbers but nothing else
-function setInputFilter(textbox, inputFilter) {
-  ["input", "keydown", "keyup", "mousedown", "mouseup", "select", "contextmenu", "drop"].forEach(function(event) {
-    textbox.addEventListener(event, function() {
-      if (inputFilter(this.value)) {
-        this.oldValue = this.value;
-        this.oldSelectionStart = this.selectionStart;
-        this.oldSelectionEnd = this.selectionEnd;
-      } else if (this.hasOwnProperty("oldValue")) {
-        this.value = this.oldValue;
-        this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-      } else {
-        this.value = "";
-      }
-    });
-  });
-}
-
-//Now passing the input into the function just defined so it's attached and return what's allowed in regex
-setInputFilter(document.getElementsByClassName("phoneInput"), function(value) {
-  return /^\d*\-*\d*\-*\d*$/.test(value); // Allow digits and '.' only, using a RegExp
-});
                                                                             //Homepage Image Overlay Idler
 
 
 $(".grid-img-overlay").each(function() {//selectiong all the grid image overlays
   $(this).on("mouseout", function() {//on mouse out so the overlay goes away when you hover out of it
-    if ($(this).css("opacity") > "0") {
+    if ($(this).css("opacity") > "0") {//opacity can be greater than 0 since there could be a fade out being triggered while a fade in is triggered
       clearTimeout(idleListener);
       $(this).css("opacity", "0")
     }
   });
-  $(this).on("mousemove", function() {
-      if ($(this).css("opacity") <= "1"){
+  $(this).on("mousemove", function() {//activates the overlay whenever the mouse is moved over the image
+      if ($(this).css("opacity") <= "1"){//less than or equal to one due to possible overlapping transitions
         $(".grid-img-overlay").css("opacity", "0");
         lastIdle = currentIdle;
         clearTimeout(idleListener);
@@ -112,9 +123,15 @@ $(".grid-img-overlay").each(function() {//selectiong all the grid image overlays
     }
   })
 });
-                                                                            //Reservation Page Form handling
+                                                                  //Reservation Page Form handling
 $('#contact-submit').on('click', function() {
   setTimeout(function() {
     $('#hp-contact-form-inner').trigger('reset')
+  }, 10)
+})
+
+$('#reserve-submit').on('click', function() {
+  setTimeout(function() {
+    $('#rp-contact-form-inner').trigger('reset')
   }, 10)
 })

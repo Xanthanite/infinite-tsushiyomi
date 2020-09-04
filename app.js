@@ -1,3 +1,5 @@
+const reservation = require('./models/reservation');
+
 var express 						= require('express'),
 	mongoose 							= require('mongoose'),
 	app 									= express(),
@@ -8,7 +10,9 @@ var express 						= require('express'),
 	favicon								= require('serve-favicon'),
 	LocalStrategy					= require('passport-local'),
 	Message								= require('./models/message'),
-	passportLocalMongoose	= require('passport-local-mongoose');
+	passportLocalMongoose	= require('passport-local-mongoose'),
+	http    							= require('http').createServer(app),
+	io 										= require('socket.io')(http);
 
 mongoose.set("useNewUrlParser", true);
 
@@ -26,8 +30,22 @@ app.use(express.static(__dirname + "/public"))
 
 																	///////////////
 																	////ROUTES////
-                                  //////////////
-                         
+																	//////////////
+																	
+var shitdates = "";
+
+io.on('connection', (socket) => {
+	console.log('a user connected');
+	socket.on('disconnect', () => {
+    console.log('user disconnected');
+	});
+	socket.on('chat message', () => {
+		reservation.find({}, {'date': 1}, function(err, allReservations) {
+			io.emit('chat message', allReservations.map(reservation => reservation.date))
+		})
+	})
+})
+                    
 app.get("/", function(req, res) {
       res.render("home");
 })
@@ -37,7 +55,9 @@ app.get("/about", function(req, res) {
 })
 
 app.get("/reserve", function(req, res) {
-  res.render("reserve");
+	Reservation.find({}, {'date': 1}, function(err, allReservations) {
+		res.render("reserve", {reservations: allReservations});
+	})
 })
 
 app.get("/menu", function(req, res) {
@@ -81,10 +101,6 @@ app.post("/reserve", (req, res) => {
 
 
 
-
-
-
-
-app.listen("3000", function() {
+http.listen("3000", function() {
   console.log("Connected to app!");
 })

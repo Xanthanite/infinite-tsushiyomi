@@ -1,9 +1,17 @@
 <%- include('partials/header.ejs') %>
-<div class = "row full-page">
+
+<div id="reserve-page" class = "row full-page">
+  
+  <div class="overlay"></div>
+
   <div id="rp-panel" class="col-lg-12 col-md-12 hp-panel">
-    <h1>Make A Reservation</h1>
+
+    <h1 id="mkreserveheader">Make A Reservation</h1>
+
+    <h2 id="mkreservebody">The form below allows you to make a reservation in advance to make sure you have a seat waiting for you upon arrival.</h2>
+
     <div id="rp-contact-form">
-      <form action="/reserve" method="POST" class="form-group">
+      <form id="rp-contact-form-inner" action="/reserve" method="POST" class="form-group">
 
         <label for="contact-us-firstName" class="contact-form-label">First Name</label>
 
@@ -15,7 +23,7 @@
 
         <label for="contact-us-phone" class="contact-form-label">Phone Number</label>
 
-        <input name="reservation[phonenumber]" type="tel" placeholder="888-888-8888" id="contact-us-phone" max-length="12" class="form-control" aria-label="Contact us phone field" required>
+        <input name="reservation[phonenumber]" type="tel" min="2222222222" max="9999999999" placeholder="888-888-8888"  id="reserve-phone" maxlength="12" class="phoneInput form-control" aria-label="Contact us phone field" required>
 
         <label for="contact-us-email" class="contact-form-label">Email Address</label>
         
@@ -25,7 +33,7 @@
 
         <input name="reservation[date]" data-date-format="dd/mm/yyyy" data-provide="datepicker" class="form-control datepicker" id="datepicker" aria-label="Reservation date field"></input>
         
-        <button type="submit" class="form-control btn btn-success">SEND</button>
+        <button type="submit" id="reserve-submit" class="form-control btn btn-success">RESERVE</button>
       
       </form>
     </div>
