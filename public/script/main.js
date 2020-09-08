@@ -1,3 +1,5 @@
+
+
 var idleListener;
 
 var currentIdle = "";
@@ -6,10 +8,14 @@ var lastIdle = "";
 
 var disabledDays = [];
 
+var otherDisabledDays = ["09/29/2020"]
+
 
 var socket = io();
-socket.emit('chat message');
-socket.on('chat message', function(dates){
+
+
+socket.emit('get dates');
+socket.on('get dates', function(dates){
   disabledDays = dates;
   $('.datepicker').datepicker({
     startDate: '+2d',
@@ -19,10 +25,29 @@ socket.on('chat message', function(dates){
   });
 });
 
+function updateDates() {
+  setTimeout(function() {
+    socket.emit('get dates');
+    socket.on('get dates', function(dates){
+    disabledDays = dates;
+    $('.datepicker').datepicker('setDatesDisabled', disabledDays)
+    console.log("UPDATED DAYS" + disabledDays)
+    })
+  }, 1000);
+}
+
 
                                                                               //On page load initialization
 $(document).ready(function() {
 //Form handling 
+  $('#rp-contact-form-inner').on('submit', function(event) {
+    updateDates()
+    event.preventDefault()
+    $(this).unbind('submit').submit()
+    console.log($(this).value.date)
+    return true
+  })
+
   $('#contact-submit').on('click', function() {
     setTimeout(function() {
       $('#hp-contact-form-inner').trigger('reset')
@@ -124,14 +149,17 @@ $(".grid-img-overlay").each(function() {//selectiong all the grid image overlays
   })
 });
                                                                   //Reservation Page Form handling
-$('#contact-submit').on('click', function() {
-  setTimeout(function() {
-    $('#hp-contact-form-inner').trigger('reset')
-  }, 10)
-})
+// $('#contact-submit').on('click', function() {
+//   setTimeout(function() {
+//     $('#hp-contact-form-inner').trigger('reset')
+//   }, 10)
+// })
 
-$('#reserve-submit').on('click', function() {
-  setTimeout(function() {
-    $('#rp-contact-form-inner').trigger('reset')
-  }, 10)
-})
+// $('#reserve-submit').on('click', function() {
+//   setTimeout(function() {
+//     $('#rp-contact-form-inner').trigger('reset')
+//   }, 10)
+// })
+
+
+

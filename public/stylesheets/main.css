@@ -47,7 +47,7 @@ input {
   height: 10vh;
   padding: 20px;
   padding-top: 1.5vh;
-  width: 800px;
+  width: 50vw;
   margin: 0 auto;
   background-image: url('http://localhost:3000/pictures/wooden-bg.jpg');
   background-size: cover;
@@ -61,6 +61,10 @@ input {
   border-top-left-radius: 0px;
   z-index: 3;
   box-shadow: 0 3px 2px -1px rgba(0,0,0,.2);
+}
+
+.navbar-header {
+  height: 8vh;
 }
 
 .navbar-nav .dropdown-menu {
@@ -191,8 +195,16 @@ input {
   font-size: 2.5vw;
 }
 
+#hp-price-subtitle {
+  width: 100%;
+  text-align: center;
+  color: salmon;
+  font-weight: 600;
+  font-size: 1vw;
+}
+
 #hp-pricinglist {
-  width: 10%;
+  width: 30vw;
   margin: auto;
   padding: 0px;
 }
@@ -232,7 +244,7 @@ input {
   margin: auto;
   margin-top: 30px;
   margin-bottom: 20px;
-  padding: 1vw;
+  padding: .7vw;
   background-color: salmon;
   color: rgb(53, 53, 53);
   border: none;
@@ -302,6 +314,7 @@ hr {
 .grid-img-overlay-body-text {
   width: 100%;
   font-size: 1vw;
+  font-weight: 600;
   text-align: center;
   color: salmon;
 }
@@ -405,7 +418,7 @@ input[type=number] {
 }
 
 #rp-panel {
-  padding-top: 8%;
+  padding-top: 12vh;
 }
 
 #mkreserveheader {
@@ -425,6 +438,7 @@ input[type=number] {
 
 #rp-contact-form {
   width: 50%;
+  height: 70vh;
   margin: auto;
   border: 4px solid rgba(148, 93, 57, 0.582);
   padding: 2vw;
@@ -488,6 +502,147 @@ th {
   cursor: not-allowed;
 }
 
+#reserve-submit {
+  margin-top: 2vh;
+}
+
+#about-page {
+  background-image: url('http://localhost:3000/pictures/about-bg.jpg');
+  background-size: cover;
+}
+
+#ap-panel {
+  padding-top: 12vh;
+}
+
+#about-us-container {
+  background-image: url('http://localhost:3000/pictures/about-body-bg.jpg');
+  background-size: contain;
+  border-radius: 3px;
+  width: 40vw;
+  height: 85vh;
+  padding: 2vw;
+  display: block;
+  box-sizing: border-box;
+}
+
+.about-us-header {
+  width: 100%;
+  color: rgb(255, 108, 92);
+  text-align: center;
+  font-size: 3.5vw;
+  font-weight: 800;
+  border: 4px solid rgba(148, 93, 57, 0.582);
+}
+
+.about-us-body {
+  width: 30vw;
+  height: 24vh;
+  color: rgb(255, 108, 92);
+  margin: auto;
+  text-align: center;
+  font-size: 1.2vw;
+  line-height: 25px;
+  font-weight: 600;
+}
+
+#ab-us-body2 {
+  height: 32vh;
+}
+
+#menu-page {
+  background-image: url('http://localhost:3000/pictures/menu-bg.jpg');
+  background-size: cover;
+}
+
+#mp-panel-1 {
+  padding-top: 20vh;
+  padding-left: 25vh;
+  margin: auto;
+}
+
+#mp-price-list {
+  margin: auto;
+  text-align: center;
+  padding: 0;
+  line-height: 6vh;
+}
+
+#mp-price-list-title {
+  color: salmon;
+  width: 25vw;
+  margin: auto;
+  margin-bottom: 2vh;
+  border: 4px solid rgba(148, 93, 57, 0.582);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.mp-price-title {
+  color: salmon;
+  font-weight: 800;
+  text-decoration: underline;
+  font-size: 2.5vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.mp-price-body {
+  color: salmon;
+  font-weight: 800;
+  font-size: 1.5vw;
+  margin: 2vh;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+#mp-panel-2 {
+  padding-top: 17vh;
+  padding-right: 25vh;
+}
+
+#menu-items {
+  background-image: url('http://localhost:3000/pictures/menu-items-bg.jpg');
+  background-size: cover;
+  margin: auto;
+  width: 25vw;
+  height: 75vh;
+  z-index: 2;
+  position: relative;
+  padding-top: 4vh;
+  border-radius: 4px;
+}
+
+#our-menu-title {
+  color: salmon;
+  font-weight: 800;
+  border: 4px solid rgba(148, 93, 57, 0.582);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.menu-items-list {
+  text-align: center;
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0.63);
+  line-height: 3.5vh;
+}
+
+.menu-item-title {
+  font-weight: 800;
+  color: salmon;
+  text-decoration: underline;
+  font-size: 1vw;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+.menu-item {
+  color: salmon;
+  font-weight: 600;
+  font-size: 1vw;
+}
+
 .footer-bar {
   background-color: rgb(148, 93, 57);
   bottom: 0;
@@ -543,6 +698,14 @@ li {
     font-size: 10px;
   }
 
+  .navbar {
+    width: 100vw;
+  }
+
+  .navbar-default .navbar-nav .navi-text {
+    font-size: 3vw;
+  }
+
   #hp-s1-panel1 {
     display: none;
   }
@@ -566,6 +729,10 @@ li {
   .hp-fresh-text {
     font-size: 3.5rem;
     margin: auto;
+  }
+
+  .hp-pricinglist-item {
+    font-size: 5.5vw;
   }
 
   .hp-reserve {
@@ -592,6 +759,10 @@ li {
 
   #hp-s3-panel2 {
     padding-left: 20%;
+  }
+
+  #rp-contact-form {
+    height: 20vh;
   }
 
   .footer-bar {

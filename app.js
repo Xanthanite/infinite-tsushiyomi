@@ -39,9 +39,9 @@ io.on('connection', (socket) => {
 	socket.on('disconnect', () => {
     console.log('user disconnected');
 	});
-	socket.on('chat message', () => {
+	socket.on('get dates', () => {
 		reservation.find({}, {'date': 1}, function(err, allReservations) {
-			io.emit('chat message', allReservations.map(reservation => reservation.date))
+			io.emit('get dates', allReservations.map(reservation => reservation.date))
 		})
 	})
 })
