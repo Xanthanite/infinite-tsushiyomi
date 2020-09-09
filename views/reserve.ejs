@@ -1,5 +1,4 @@
 <%- include('partials/header.ejs') %>
-
 <div id="reserve-page" class = "row full-page">
   
   <div class="overlay"></div>
@@ -9,7 +8,7 @@
     <h1 id="mkreserveheader">Make A Reservation</h1>
 
     <h2 id="mkreservebody">The form below allows you to make a reservation in advance to make sure you have a seat waiting for you upon arrival.</h2>
-
+                                                                            <!-- Reservation Form Start -->
     <div id="rp-contact-form">
       <form id="rp-contact-form-inner" action="/reserve" method="POST" class="form-group">
 
@@ -34,15 +33,9 @@
         <input name="reservation[date]" data-date-format="dd/mm/yyyy" data-provide="datepicker" class="form-control datepicker" id="datepicker" aria-label="Reservation date field"></input>
         
         <button type="submit" id="reserve-submit" class="form-control btn btn-success">RESERVE</button>
-      
+                                                                  <!-- Reservation Form End -->
       </form>
     </div>
   </div>
-
-
-
-
-
-
 </div>
 <%- include('partials/footer.ejs') %>

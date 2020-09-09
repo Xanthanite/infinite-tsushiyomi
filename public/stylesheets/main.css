@@ -1,3 +1,4 @@
+                                                                        /* General Selectors */
 body {
   font-family: 'Spectral';
   margin: 0;
@@ -6,11 +7,27 @@ body {
   overflow-x: hidden;
 }
 
+.full-page {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border: .5px solid salmon;
+  width: 30%;
+}
+
 .overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.644);
+  background-color: rgba(0, 0, 0, 0.712);
   position: fixed;
+}
+
+.form-group {
+  margin: 0;
 }
 
 input {
@@ -35,7 +52,7 @@ input {
   color: rgb(236, 119, 106);
   font-weight: 500;
 }
-
+                                                                    /* Navbar */
 .mini-logo {
   height: 90px;
   width: 150px;
@@ -47,7 +64,7 @@ input {
   height: 10vh;
   padding: 20px;
   padding-top: 1.5vh;
-  width: 50vw;
+  width: 60vw;
   margin: 0 auto;
   background-image: url('http://localhost:3000/pictures/wooden-bg.jpg');
   background-size: cover;
@@ -103,9 +120,9 @@ input {
   font-family: 'Nanum Brush Script', cursive;
   color: salmon;
   font-weight: 800;
-  font-size: 2.0rem;
+  font-size: 2vw;
   padding: 0;
-  padding-top: 4px;
+  padding-top: 1vh;
   display: inline-block;
   height: 70px;
   transition: all ease-in-out .4s;
@@ -124,7 +141,7 @@ input {
 .navbar-default .navbar-nav .navi-text {
   font-weight: 600;
   padding: 0px 8px;
-  font-size: 1.0rem;
+  font-size: 1vw;
   color: salmon;
   transition: all ease-in-out .4s;
   -moz-user-select: none;
@@ -134,14 +151,7 @@ input {
 .navbar-default .navbar-nav .navi-text:hover {
   color: rgb(145, 71, 71);
 }
-
-.full-page {
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
+                                                                    /* Homepage aka HP */
 .hp-panel {
   height: 100%;
   padding: 0px;
@@ -279,11 +289,6 @@ input {
   margin: auto;
 }
 
-hr {
-  border: .5px solid salmon;
-  width: 30%;
-}
-
 .grid-img-overlay {
   width: 100%;
   height: 100%;
@@ -389,10 +394,6 @@ input[type=number] {
   border: 4px solid rgba(148, 93, 57, 0.582);;
 }
 
-.form-group {
-  margin: 0;
-}
-
 .contact-form-label {
   font-weight: 800;
   width: 100%;
@@ -411,7 +412,7 @@ input[type=number] {
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
 }
-
+                                                                /* Reserve Page AKA rp */
 #reserve-page {
   background-image: url('http://localhost:3000/pictures/table-reserve-bg.jpg');
   background-size: cover;
@@ -505,7 +506,7 @@ th {
 #reserve-submit {
   margin-top: 2vh;
 }
-
+                                                                        /* About Us Page aka ap */
 #about-page {
   background-image: url('http://localhost:3000/pictures/about-bg.jpg');
   background-size: cover;
@@ -549,7 +550,7 @@ th {
 #ab-us-body2 {
   height: 32vh;
 }
-
+                                                                          /* Menu Page aka mp */
 #menu-page {
   background-image: url('http://localhost:3000/pictures/menu-bg.jpg');
   background-size: cover;
@@ -642,7 +643,7 @@ th {
   font-weight: 600;
   font-size: 1vw;
 }
-
+                                                                        /* Footer bar */
 .footer-bar {
   background-color: rgb(148, 93, 57);
   bottom: 0;
@@ -668,13 +669,14 @@ li {
 }
 
 .fab {
-  font-size: 3rem;
+  font-size: 3vmax;
   color: black;
   padding: 0px 2px;
 }
 
 .media-icons {
   padding-top: 10px;
+  margin: 0px;
 }
 
                                                                     /* MOBILE RESPONSIVENESS */
@@ -692,7 +694,7 @@ li {
  
  /* Extra large devices (large laptops and desktops, 1200px and up) */
  /* @media only screen and (min-width: 1200px) {...}  */
-
+                                                                    /* OPTIMIZATION FOR MOBILE */
 @media only screen and (max-width: 768px) {
   body {
     font-size: 10px;
@@ -703,7 +705,7 @@ li {
   }
 
   .navbar-default .navbar-nav .navi-text {
-    font-size: 3vw;
+    font-size: 1.5vw;
   }
 
   #hp-s1-panel1 {
@@ -729,6 +731,22 @@ li {
   .hp-fresh-text {
     font-size: 3.5rem;
     margin: auto;
+  }
+
+  #hp-section-2 {
+    padding-top: 30vh;
+  }
+
+  #hp-pricing {
+    width: 100vw;
+  }
+
+  #hp-price-title {
+    font-size: 6.5vw;
+  }
+
+  #hp-price-subtitle {
+    font-size: 6.0vw;
   }
 
   .hp-pricinglist-item {
@@ -761,12 +779,75 @@ li {
     padding-left: 20%;
   }
 
+  #about-us-container {
+    width: 85vw;
+  }
+
+  .about-us-header {
+    font-size: 5.5vw;
+  }
+
+  .about-us-body {
+    font-size: 4vw;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: 80vw;
+  }
+
+  #mp-mobile-s1 {
+    padding-top: 15vh;
+  }
+
+  #mp-mobile-s2 {
+    padding-top: 10vh;
+  }
+
+  #mp-price-list-title {
+    width: 50vw;
+  }
+
+  .mp-price-title {
+    font-size: 8.5vw;
+  }
+
+  .mp-price-body {
+    font-size: 3.5vw;
+  }
+
+  #our-menu-title-mobile {
+    color: salmon;
+    font-weight: 800;
+    border: 4px solid rgba(148, 93, 57, 0.582);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+  }
+
+  #menu-items {
+    width: 90vw;
+  }
+
+  .menu-item-title {
+    font-size: 3.7vw;
+  }
+
+  .menu-item {
+    font-size: 3.3vw;
+  }
+
+  #mkreserveheader {
+    font-size: 6.5vw;
+  }
+
+  #mkreservebody {
+    font-size: 3.5vw;    
+  }
+
   #rp-contact-form {
-    height: 20vh;
+    height: 70vh;
   }
 
   .footer-bar {
-    height: 50px;
+    height: 10vh;
   }
 
   .footer-bar-inner {
@@ -778,10 +859,62 @@ li {
   }
 
   .social-icon-holder {
-    height: 10px;
+    height: 29px;
   }
 
   .footer-text {
     height: 20px;
   }
+}
+                                                                /* OPTIMIZATION FOR EXTRA-LARGE SCREENS */
+@media only screen and (min-width: 2500px) {
+  .hp-reserve {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+  }
+
+  #hp-s1-text {
+    padding: 6vw;
+  }
+
+  #hp-contact-form {
+    padding-top: 10vh;
+  }
+
+  #hp-s3-panel1 {
+    padding-top: 23vh;
+  }
+
+  #rp-contact-form {
+    padding-top: 10vh;
+  }
+}
+
+@media only screen and (min-width: 2500px) {
+  .navbar-default .navbar-brand-text{
+    padding-top: 2vh;
+  }
+
+  .navbar-default .navbar-nav .navi-text{
+    font-size: 1.4rem;
+  }
+
+  .dropdown-menu {
+    font-size: 1.5rem;
+  }
+  
+  #sushi-pick{
+    height: 800px;
+    width: 850px;
+  }
+
+  .contact-form-label{
+    font-size: 2.5rem
+  }
+
+  .about-us-body{
+    line-height: 45px;
+  }
+
+
 }

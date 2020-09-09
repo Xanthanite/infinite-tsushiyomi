@@ -3,14 +3,10 @@ const reservation = require('./models/reservation');
 var express 						= require('express'),
 	mongoose 							= require('mongoose'),
 	app 									= express(),
-	passport 							= require('passport'),
 	bodyParser 						= require('body-parser'),
-	User									= require('./models/user'),
 	Reservation						= require('./models/reservation'),
 	favicon								= require('serve-favicon'),
-	LocalStrategy					= require('passport-local'),
 	Message								= require('./models/message'),
-	passportLocalMongoose	= require('passport-local-mongoose'),
 	http    							= require('http').createServer(app),
 	io 										= require('socket.io')(http);
 
