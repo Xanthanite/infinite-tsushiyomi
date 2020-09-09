@@ -1,5 +1,3 @@
-
-
 var idleListener;
 
 var currentIdle = "";
@@ -10,9 +8,7 @@ var disabledDays = [];
 
 var otherDisabledDays = ["09/29/2020"]
 
-
 var socket = io();
-
 
 socket.emit('get dates');
 socket.on('get dates', function(dates){
@@ -78,7 +74,7 @@ $(document).ready(function() {
   }
 //Now passing the input into the function just defined so it's attached and return what's allowed in regex
   setInputFilter($(".phoneInput"), function(value) {
-    return /^\d*\-*\d*\-*\d*$/.test(value); // Allow digits and '.' only, using a RegExp
+    return /^\d*\-*\d*\-*\d*$/.test(value); // Allow digits and '-' only in a specific format, using a RegExp
   });
 })
                                                               //Smooth Scroll Handling
@@ -142,13 +138,13 @@ $(".grid-img-overlay").each(function() {//selectiong all the grid image overlays
               console.log(currentIdle);
               $(this).css("opacity", "0");
           }
-        }.bind(this), 1500);
+        }.bind(this), 1500);//Binded this here as I was receiving errors due to scope
       } else if ($(this).css("opacity") == "1") {
       clearTimeout(idleListener);
     }
   })
 });
-                                                                  //Reservation Page Form handling
+                                                                  //Reservation Page Form handling (moved to onpageload)
 // $('#contact-submit').on('click', function() {
 //   setTimeout(function() {
 //     $('#hp-contact-form-inner').trigger('reset')

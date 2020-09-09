@@ -27,8 +27,6 @@ app.use(express.static(__dirname + "/public"))
 																	///////////////
 																	////ROUTES////
 																	//////////////
-																	
-var shitdates = "";
 
 io.on('connection', (socket) => {
 	console.log('a user connected');
