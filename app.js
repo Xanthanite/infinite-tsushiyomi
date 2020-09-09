@@ -10,11 +10,15 @@ var express 						= require('express'),
 	http    							= require('http').createServer(app),
 	io 										= require('socket.io')(http);
 
-mongoose.set("useNewUrlParser", true);
-
-mongoose.set('useUnifiedTopology', true);
-
-mongoose.connect("mongodb://localhost/infinite_tsushiyomi")
+mongoose.connect(process.env.DATABASEURL, {
+	useCreateIndex: true,
+	useNewUrlParser: true,
+	useUnifiedTopology: true
+}).then(() => {
+	console.log("Connected to db!")
+}).catch(err => {
+	console.log('ERROR:', err.message)
+})
 
 app.use(bodyParser.urlencoded({extended:true}));
 
