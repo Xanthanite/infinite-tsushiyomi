@@ -66,7 +66,7 @@ input {
   padding-top: 1.5vh;
   width: 60vw;
   margin: 0 auto;
-  background-image: url('http://localhost:3000/pictures/wooden-bg.jpg');
+  background-image: url('https://i.imgur.com/PbfTFOh.jpg');
   background-size: cover;
   background-position-y: 120px;
   position: fixed;
@@ -159,7 +159,7 @@ input {
 }
 
 #hp-section-1 {
-  background-image: url('http://localhost:3000/pictures/dojo-bg.jpg');
+  background-image: url('https://i.imgur.com/Hvt7yMt.jpg');
   background-size: cover;
 }
 
@@ -279,7 +279,7 @@ input {
 }
 
 #hp-section-2 {
-  background-image: url('http://localhost:3000/pictures/buffet-bg.jpg');
+  background-image: url('https://i.imgur.com/gqyOnFF.jpg');
   background-size: cover;
   padding-top: 12vh;
 }
@@ -341,7 +341,7 @@ input {
 }
 
 #hp-section-3 {
-  background-image: url('http://localhost:3000/pictures/contact-bg.jpg');
+  background-image: url('https://i.imgur.com/DuVKnNg.jpg');
   background-size: cover;
 }
 
@@ -414,7 +414,7 @@ input[type=number] {
 }
                                                                 /* Reserve Page AKA rp */
 #reserve-page {
-  background-image: url('http://localhost:3000/pictures/table-reserve-bg.jpg');
+  background-image: url('https://i.imgur.com/6nnMNJR.jpg');
   background-size: cover;
 }
 
@@ -517,7 +517,7 @@ th {
 }
 
 #about-us-container {
-  background-image: url('http://localhost:3000/pictures/about-body-bg.jpg');
+  background-image: url('https://i.imgur.com/gImkM4O.jpg');
   background-size: contain;
   border-radius: 3px;
   width: 40vw;
@@ -552,7 +552,7 @@ th {
 }
                                                                           /* Menu Page aka mp */
 #menu-page {
-  background-image: url('http://localhost:3000/pictures/menu-bg.jpg');
+  background-image: url('https://i.imgur.com/cay03qz.jpg');
   background-size: cover;
 }
 
@@ -603,7 +603,7 @@ th {
 }
 
 #menu-items {
-  background-image: url('http://localhost:3000/pictures/menu-items-bg.jpg');
+  background-image: url('https://i.imgur.com/R5kUDQn.jpg');
   background-size: cover;
   margin: auto;
   width: 25vw;
